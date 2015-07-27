@@ -267,7 +267,8 @@ NSString *const yKey = @"y";
 {
     self.state = CBStoreHouseRefreshControlStateDisappearing;
     UIEdgeInsets newInsets = self.scrollView.contentInset;
-    newInsets.top = self.originalTopContentInset;
+    /* newInsets.top = self.originalTopContentInset; */
+    newInsets.top = 0;
     [UIView animateWithDuration:kdisappearDuration animations:^(void) {
         self.scrollView.contentInset = newInsets;
     } completion:^(BOOL finished) {
